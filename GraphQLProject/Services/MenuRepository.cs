@@ -55,7 +55,7 @@ namespace GraphQLProject.Services
         public Menu UpdateMenu(int id, Menu menu)
         {
             MenuList[id] = menu;
-            return
+            return menu;
         }
     }
 }
