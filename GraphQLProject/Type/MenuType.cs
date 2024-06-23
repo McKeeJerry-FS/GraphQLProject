@@ -11,6 +11,8 @@ namespace GraphQLProject.Type
             Field(m => m.Name);
             Field(m => m.Description);
             Field(m => m.Price);
+            Field(m => m.ImageUrl);
+            Field(m => m.CategoryId);
         }
 
     }

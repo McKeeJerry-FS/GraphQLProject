@@ -20,14 +20,26 @@ builder.Services.AddTransient<IMenuRepository, MenuRepository>();
 builder.Services.AddTransient<ICategoryRepository, CategoryRepository>();
 builder.Services.AddTransient<IReservationRepository, ReservationRepository>();
 
+// Types
 builder.Services.AddTransient<MenuType>();
-builder.Services.AddTransient<MenuQuery>();
-builder.Services.AddTransient<MenuMutation>();
-builder.Services.AddTransient<MenuInputType>();
+builder.Services.AddTransient<CategoryType>();
+builder.Services.AddTransient<ReservationType>();
 
-builder.Services.AddTransient<ISchema, MenuSchema>();
+// Queries
+builder.Services.AddTransient<MenuQuery>();
+builder.Services.AddTransient<CategoryQuery>();
+builder.Services.AddTransient<ReservationQuery>();
+
+// Mutations
+//builder.Services.AddTransient<MenuMutation>();
+//builder.Services.AddTransient<MenuInputType>();
+
+// Schema
+builder.Services.AddTransient<ISchema, RootSchema>();
+
 // Adding GraphQL services
 builder.Services.AddGraphQL(b => b.AddAutoSchema<ISchema>().AddSystemTextJson());
+
 // Adding DbContext
 builder.Services.AddDbContext<GraphQLDbContext>(options => options.UseSqlServer(
     builder.Configuration.GetConnectionString("DellGraphQLConnection")));
