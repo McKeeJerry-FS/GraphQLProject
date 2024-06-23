@@ -23,9 +23,9 @@ namespace GraphQLProject.Data
            );
 
             modelBuilder.Entity<Menu>().HasData(
-               new Menu { Id = 1, Name = "Chicken Wings", Description = "Spicy chicken wings served with blue cheese dip.", Price = 9.99, ImageUrl = "https://example.com/menus/chicken-wings.jpg", CategoryId = 1 },
-               new Menu { Id = 2, Name = "Steak", Description = "Grilled steak with mashed potatoes and vegetables.", Price = 24.50, ImageUrl = "https://example.com/menus/steak.jpg", CategoryId = 2 },
-               new Menu { Id = 3, Name = "Chocolate Cake", Description = "Decadent chocolate cake with a scoop of vanilla ice cream.", Price = 6.95, ImageUrl = "https://example.com/menus/chocolate-cake.jpg", CategoryId = 3 }
+               new Menu { Id = 1, Name = "Chicken Wings", Description = "Spicy chicken wings served with blue cheese dip.", Price = 9.99m, ImageUrl = "https://example.com/menus/chicken-wings.jpg", CategoryId = 1 },
+               new Menu { Id = 2, Name = "Steak", Description = "Grilled steak with mashed potatoes and vegetables.", Price = 24.50m, ImageUrl = "https://example.com/menus/steak.jpg", CategoryId = 2 },
+               new Menu { Id = 3, Name = "Chocolate Cake", Description = "Decadent chocolate cake with a scoop of vanilla ice cream.", Price = 6.95m, ImageUrl = "https://example.com/menus/chocolate-cake.jpg", CategoryId = 3 }
             );
 
             modelBuilder.Entity<Reservation>().HasData(

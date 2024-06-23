@@ -29,10 +29,18 @@ builder.Services.AddTransient<ReservationType>();
 builder.Services.AddTransient<MenuQuery>();
 builder.Services.AddTransient<CategoryQuery>();
 builder.Services.AddTransient<ReservationQuery>();
+builder.Services.AddTransient<RootQuery>();
 
 // Mutations
-//builder.Services.AddTransient<MenuMutation>();
-//builder.Services.AddTransient<MenuInputType>();
+builder.Services.AddTransient<MenuMutation>();
+builder.Services.AddTransient<CategoryMutation>();
+builder.Services.AddTransient<ReservationMutation>();
+builder.Services.AddTransient<RootMutation>();
+
+// InputTypes
+builder.Services.AddTransient<MenuInputType>();
+builder.Services.AddTransient<CategoryInputType>();
+builder.Services.AddTransient<ReservationInputType>();
 
 // Schema
 builder.Services.AddTransient<ISchema, RootSchema>();

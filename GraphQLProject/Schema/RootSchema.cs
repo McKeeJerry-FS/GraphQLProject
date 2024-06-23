@@ -1,4 +1,5 @@
-﻿using GraphQLProject.Query;
+﻿using GraphQLProject.Mutation;
+using GraphQLProject.Query;
 
 namespace GraphQLProject.Schema
 {
@@ -7,6 +8,7 @@ namespace GraphQLProject.Schema
         public RootSchema(IServiceProvider serviceProvider) : base(serviceProvider)
         {
             Query = serviceProvider.GetRequiredService<RootQuery>();
+            Mutation = serviceProvider.GetRequiredService<RootMutation>();
         }
         
     }
